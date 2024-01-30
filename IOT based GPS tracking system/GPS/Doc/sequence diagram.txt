@@ -1,0 +1,27 @@
+In this diagram, the user sends a location request to the GPS device. The GPS device receives the request and sends GPS location data back to the user. Meanwhile, the black box records event data, such as speed and acceleration, and stores it for later use. When the user sends a black box request, the black box sends the event data to the user, who can then store it for later analysis.
+
+
+   +---------+                   +---------------+                    +----------------+
+   |         |                   |               |                    |                |
+   |  User   |                   |   GPS Device  |                    |   Black Box    |
+   |         |                   |               |                    |                |
+   +---------+                   +---------------+                    +----------------+
+       |                                 |                                     |
+       |  Sends location request         |                                     |
+       |-------------------------------->|                                     |
+       |                                 |   Sends GPS location data           |
+       |                                 |------------------------------------>|
+       |                                 |                                     |
+       |                                 |      Receives GPS location data     |
+       |                                 |<------------------------------------|
+       |                                 |                                     |
+       |  Sends black box request        |                                     |
+       |-------------------------------->|                                     |
+       |                                 |      Records event data             |
+       |                                 |<------------------------------------|
+       |                                 |                                     |
+       |  Sends event data               |                                     |
+       |-------------------------------->|                                     |
+       |                                 |      Stores event data              |
+       |                                 |<------------------------------------|
+       |                                 |                                     |

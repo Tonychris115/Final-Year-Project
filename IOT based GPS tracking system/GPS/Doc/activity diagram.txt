@@ -1,0 +1,30 @@
+Here is an activity diagram for an IoT-based GPS tracking system with a black box using NodeMCU:
+
+Start
+Initialize NodeMCU and GPS module
+Connect NodeMCU to the internet
+Get GPS data from module
+Store GPS data in the database
+Check if there is a collision or an accident
+If there is a collision or an accident, activate black box
+Record black box data (including GPS coordinates, speed, and other relevant data)
+Send black box data to the cloud
+Send a notification to the relevant authorities (emergency services, insurance company, etc.)
+Stop
+                                        +-------------+
+                                        |   Database  |
+                                        +------+------+
+                                               |
+                             +-----------------+-------------------+
+                             |                                     |
+                     +-------v------+                      +-------v------+
+                     |   GPS module |                      |     NodeMCU  |
+                     +--------------+                      +--------------+
+                             |                                     |
+                             |    +------------------------+       |
+                             +----> Internet Connection    <-------+
+                                  +------------------------+
+                                               |
+                                        +------+------+
+                                        | Black Box   |
+                                        +-------------+
